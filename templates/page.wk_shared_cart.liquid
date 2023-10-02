@@ -1,0 +1,57 @@
+<div class="wk-container">
+    {% if customer %}
+    {% else %}
+      <script>window.location = '/account/login?checkout_url='+window.location.href;</script>
+      {% endif %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <!--<link rel="stylesheet" type="text/css" href="https://mohit-gupta.webkul.com/shared-cart-service/public/less/frontend.min.css">-->
+        <link rel="stylesheet" type="text/less" href="https://sharecart.webkul.com/less/frontend.less">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+      
+        {% if theme.name == "Boundless" %}
+        <style>
+          @-moz-document url-prefix() { 
+            .wk-header{
+              margin-top: 130px;
+            }
+          }
+        </style>
+        {% endif %}
+
+        {% if theme.name == "Simple" %}
+        <style>
+          table th,table td{
+            text-align: center;
+          }
+          table th:first-child{
+            width: 5px !important;
+          }
+          .members-table th:nth-child(2){
+            width: 100px !important;
+          }
+          .members-table th:nth-child(4){
+            width: 110px !important;
+          }
+          .members-table th:nth-child(5){
+            width: 5px !important;
+          }
+          #share-with-me-table td:nth-child(2), #share-by-me-table td:nth-child(2){
+            word-break: break-word;
+          }
+        </style>
+        {% endif %}
+      
+      <script>
+          var shopifyCustomerId = '{{customer.id}}';
+          var shopifyCustomerEmail = '{{customer.email}}';
+          var shopifyTheme = '{{theme.name}}';
+      </script>
+      <link href="https://sharecart.webkul.com/css/frontend.css" rel="stylesheet">
+    
+      <div id="snackbar">Some text some message..</div>
+        <div id="wk-loader"><img src="https://sharecart.webkul.com/images/loader.gif"></div>
+    
+      <div id="wk-container-body"></div>
+  
+        <script src="https://sharecart.webkul.com/js/frontend/common.js"></script>
+  </div>

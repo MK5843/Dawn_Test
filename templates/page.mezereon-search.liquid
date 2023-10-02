@@ -1,0 +1,21 @@
+{%- assign searchTitle = 'general.search.title' | t -%}
+{%- if searchTitle contains 'translation missing' -%}
+{%- assign searchTitle = 'Search results' -%}
+{%- endif -%}
+<div class="shopify-section spaced-section spaced-section--full-width">
+  {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+  <div class="collection-hero">
+    <div class="collection-hero__inner page-width">
+      <div class="collection-hero__text-wrapper">
+        <h1 class="collection-hero__title">
+        <span class="visually-hidden">Search: </span>{{ searchTitle }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="shopify-section spaced-section spaced-section--full-width">
+  <div class="page-width">
+    {{ page.content }}
+    {% include 'mezereon-search' %}
+  </div>
+</div>
