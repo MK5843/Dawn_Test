@@ -1,1 +1,48 @@
-{"sections":{"main":{"type":"main-login","settings":{"padding_top":36,"padding_bottom":36}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-login",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17290734628145ca7e": {
+      "type": "apps",
+      "blocks": {
+        "miniorange_otp_login_register_otp_login_QiTQRX": {
+          "type": "shopify://apps/miniorange-otp-login-register/blocks/otp-login/dba67ab6-2825-41e1-83fd-7500e426945d",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "miniorange_otp_login_register_otp_login_QiTQRX"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17290735744ccc9787": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17290734628145ca7e",
+    "17290735744ccc9787"
+  ]
+}
